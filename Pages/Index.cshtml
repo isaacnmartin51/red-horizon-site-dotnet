@@ -1,0 +1,32 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div id="bio" class="container">
+    <partial name="_Bio.cshtml"></partial>
+</div>
+<section>
+    <div id="music" class="container">
+        <h1>
+            Music
+        </h1>
+    </div>
+</section>
+<div id="shows" class="container">
+<partial name="Shared/_Shows.cshtml" model="@Model.ShowDetails"></partial>
+</div>
+<section>
+    <div id="photos" class="container">
+        <h1>
+            Photos
+        </h1>
+    </div>
+</section>
+<section>
+    <div id="bookings" class="container">
+        <h1>Book us</h1>
+        <partial name="Shared/_BookingForm.cshtml"></partial>
+    </div>
+</section>

@@ -1,0 +1,26 @@
+@using RedHorizonSite.Data
+@model List<ShowDetails>
+
+<section>
+    <h1>
+        Shows
+    </h1>
+    <table>
+        <thead>
+            <th>Date</th>
+            <th>Event</th>
+        </thead>
+        <p>@Model.Count()</p>
+        @foreach (var show in @Model)
+        {
+            <tr>
+                <td>
+                    @show.Time
+                </td>
+                <td>
+                    @show.Name
+                </td>
+            </tr>
+        }
+    </table>
+</section>
